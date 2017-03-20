@@ -1,3 +1,3 @@
 # NEDynamicCell
 
-![image](https://github.com/dynamicCell/cell.gif )   
+![image](https://github.com/NEDynamicCell/cell.gif )   

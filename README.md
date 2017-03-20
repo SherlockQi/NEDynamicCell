@@ -6,14 +6,14 @@
 ####原理:
 1. 监听 tableView 滚动
 2. 改变 cell 中图片的 frame
-源码:https://github.com/SherlockQi/NEDynamicCell
-####实现:
-#####自定义 cell 
+
+实现:
+自定义 cell 
 imageView 的上下约束要超过 cell 的 contentView
 
 ![imageView的约束](http://upload-images.jianshu.io/upload_images/1721249-5319e516b6428e56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#####监听滚动
+监听滚动
 ```
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     //可见 cell 
@@ -25,7 +25,7 @@ imageView 的上下约束要超过 cell 的 contentView
 }
 ```
 
-#####cell 中改变图片 frame的方法
+cell 中改变图片 frame的方法
 ```
 - (void)scrollCell:(UITableView *)tableView{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
@@ -53,8 +53,8 @@ imageView 的上下约束要超过 cell 的 contentView
 
 
 这样就可以实现效果了
-##注意:
- #####一.页面跳动
+注意:
+一.页面跳动
 但是在运行时会发现,在第一次滚动时页面会进行一次调整,页面会跳一下.
 我们在页面显示完成后主动调用一下scrollViewDidScroll 方法就可以解决;
 ```
@@ -64,7 +64,7 @@ imageView 的上下约束要超过 cell 的 contentView
     [self scrollViewDidScroll:self.tableView];
 }
 ```
-#####二.分割线
+二.分割线
 为了让 cell 分开,自定义了 cell 分割线
 但是在点击 cell 时 分割线会变透明,如图
 

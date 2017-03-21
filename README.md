@@ -1,6 +1,9 @@
 # NEDynamicCell
 
+
    
+
+
 
 ![image](https://github.com/SherlockQi/NEDynamicCell/blob/master/cell.gif )   
 
@@ -74,4 +77,7 @@ cell 中改变图片 frame的方法
 ```
  cell.selectionStyle = UITableViewCellSelectionStyleNone;
 ```
+
+
+
 

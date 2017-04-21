@@ -6,12 +6,12 @@
 //  Copyright © 2017年 Sherlock. All rights reserved.
 //
 #import "NETransition.h"
-#import <UIKit/UIViewControllerTransitioning.h>
+//#import <UIKit/UIViewControllerTransitioning.h>
 #import "NEDetailTableViewController.h"
 #import "ViewController.h"
 @interface NETransition()
 
-@property (nonatomic, strong) UIView *topView;
+//@property (nonatomic, strong) UIView *topView;
 @property (nonatomic, strong) UIView *midView;
 @property (nonatomic, strong) UIView *botView;
 
@@ -52,6 +52,8 @@
     UIView *containView = [transitionContext containerView];
    
     
+
+    
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     NSLog(@"%f",duration);
@@ -62,34 +64,29 @@
         [containView addSubview:toView];
         
         
-        
-        UIView *midView = [[UIView alloc]initWithFrame:self.rect];
-        midView.backgroundColor = [UIColor yellowColor];
+        UIView *midView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.rect), self.rect.size.width, toView.bounds.size.height - CGRectGetMaxY(self.rect))];
+        midView.backgroundColor = [UIColor whiteColor];
         [containView addSubview:midView];
         
-        UIView *topView = [[UIView alloc]initWithFrame:self.rect];
-        topView.backgroundColor = [UIColor blueColor];
-        [containView addSubview:topView];
         
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:topView.bounds];
-        imageView.image = self.topViewImage;
-        [topView addSubview:imageView];
-        
-        
-        UIView *bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 720, self.rect.size.width, 720- 2*self.rect.size.height)];
+        UIView *bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, toView.bounds.size.height, self.rect.size.width, toView.bounds.size.height- 2*self.rect.size.height)];
         bottomView.backgroundColor = [UIColor orangeColor];
         [containView addSubview:bottomView];
         
-        self.topView = topView;
+
+
+        [containView insertSubview:self.topView atIndex:999];
+
         self.midView = midView;
         self.botView = bottomView;
+        toViewController.bottomView = bottomView;
         
         [UIView animateWithDuration:0.8 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
-            topView.frame = CGRectMake(0, 0, self.rect.size.width, self.rect.size.height);
+            self.topView.frame = CGRectMake(0, 0, self.rect.size.width, self.rect.size.height);
             midView.frame = CGRectMake(0, self.rect.size.height, self.rect.size.width, self.rect.size.height);
-            bottomView.frame = CGRectMake(0, CGRectGetMaxY(midView.frame), self.rect.size.width, 720- 2*self.rect.size.height);
+            bottomView.frame = CGRectMake(0, CGRectGetMaxY(midView.frame), self.rect.size.width, toView.bounds.size.height- 2*self.rect.size.height);
         } completion:^(BOOL finished) {
-            toView.tableHeaderView = topView;
+            toView.tableHeaderView = self.topView;
             [transitionContext completeTransition:finished];
         }];
     }
@@ -109,11 +106,15 @@
 
     
 
-    [UIView animateWithDuration:3 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+    [UIView animateWithDuration:1.2 delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
     
-        self.topView.frame = self.rect;
         self.midView.frame = self.rect;
         self.botView.frame = self.rect;
+        self.topView.frame = self.rect;
+
+        self.midView.alpha = 0;
+        self.botView.alpha = 0;
+
         
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:finished];
@@ -122,6 +123,15 @@
     
 
 }
+
+- (void)setTopView:(UIView *)topView{
+    _topView = topView;
+    _topView.frame = self.rect;
+}
+
+
+
+
 
 //- (id <UIViewImplicitlyAnimating>) interruptibleAnimatorForTransition:(id <UIViewControllerContextTransitioning>)transitionContext NS_AVAILABLE_IOS(10_0){
 //    return nil;

@@ -15,5 +15,7 @@
 
 @property (nonatomic, assign) BOOL present;
 
-@property (nonatomic, strong) UIImage *topViewImage;
+
+
+@property (nonatomic, strong) UIView *topView;
 @end

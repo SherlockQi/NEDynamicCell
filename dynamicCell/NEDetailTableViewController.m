@@ -9,7 +9,6 @@
 #import "NEDetailTableViewController.h"
 
 @interface NEDetailTableViewController ()
-
 @end
 
 @implementation NEDetailTableViewController
@@ -39,10 +38,17 @@
     
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-         [self dismissViewControllerAnimated:YES completion:nil];
-    });
+
+-(void)setBottomView:(UIView *)bottomView{
+    _bottomView = bottomView;
+    [_bottomView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTap:)]];
 }
+
+ - (void)viewTap:(UITapGestureRecognizer *)tap
+ {
+     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+         [self dismissViewControllerAnimated:YES completion:nil];
+     });
+ }
+
 @end

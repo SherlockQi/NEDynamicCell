@@ -10,12 +10,14 @@
 #import "NETableViewCell.h"
 #import "NEDetailTableViewController.h"
 #import "NETransition.h"
-
+//#import "DHSmartScreenshot.h"
+#import "UIView+DHSmartScreenshot.h"
 
 @interface ViewController ()<UIViewControllerTransitioningDelegate>
 
 //@property (nonatomic, strong) NETableViewCell *selectCell;
 @property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) NETransition *transition;
 @end
 
 @implementation ViewController
@@ -59,43 +61,31 @@
     detailViewC.modalPresentationStyle = UIModalPresentationCustom;
     detailViewC.transitioningDelegate = self;
     self.indexPath = indexPath;
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self presentViewController:detailViewC animated:YES completion:nil];
-
     });
-    
 }
 
 //MARK: - UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     
-    NETransition *transition = [[NETransition alloc]init];
-    
+    self.transition = [[NETransition alloc]init];
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     CGRect cellFrame = [self.tableView rectForRowAtIndexPath:self.indexPath];
-    
-//    NETableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.indexPath];
-    
-    
+    NETableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.indexPath];
     CGRect rect = [self.tableView convertRect:cellFrame toView:window];
-    
-
     NSLog(@"%@",NSStringFromCGRect(rect));
-    
-   
-
-    transition.rect = rect;
-    transition.present = YES;
-    transition.topViewImage =  [self screenshotWithRect:rect];
-    return transition;
+    self.transition.rect = rect;
+    self.transition.present = YES;
+    self.transition.topView = [cell snapshotViewAfterScreenUpdates:YES];
+    return self.transition;
 }
 
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
-    NETransition *transition = [[NETransition alloc]init];
-    transition.present = NO;
-    return transition;
+
+    self.transition.present = NO;
+    return self.transition;
 }
 
 
@@ -125,32 +115,5 @@
 //}
 
 
-- (UIImage *)screenshotWithRect:(CGRect)rect;
-{
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
-    
-   
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    if (context == NULL)
-    {
-        return nil;
-    }
-    CGContextSaveGState(context);
-    CGContextTranslateCTM(context, -rect.origin.x, -rect.origin.y);
-    
-    if( [self respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)])
-    {
-        [window drawViewHierarchyInRect:window.bounds afterScreenUpdates:NO];
-    }
-    else
-    {
-        [window.layer renderInContext:context];
-    }
-    CGContextRestoreGState(context);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
 
-    return image;
-}
  @end

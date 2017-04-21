@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E7F14971E822AE300CB32A0 /* UIView+DHSmartScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F14901E822AE300CB32A0 /* UIView+DHSmartScreenshot.m */; };
+		8E7F14981E822AE300CB32A0 /* UIImage+DHImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F14921E822AE300CB32A0 /* UIImage+DHImageAdditions.m */; };
+		8E7F14991E822AE300CB32A0 /* UIScrollView+DHSmartScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F14931E822AE300CB32A0 /* UIScrollView+DHSmartScreenshot.m */; };
+		8E7F149A1E822AE300CB32A0 /* UITableView+DHSmartScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F14951E822AE300CB32A0 /* UITableView+DHSmartScreenshot.m */; };
 		8E8E55BB1E7F7C720031E216 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E55BA1E7F7C720031E216 /* main.m */; };
 		8E8E55BE1E7F7C720031E216 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E55BD1E7F7C720031E216 /* AppDelegate.m */; };
 		8E8E55C11E7F7C720031E216 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E55C01E7F7C720031E216 /* ViewController.m */; };
@@ -20,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E7F148F1E822AE300CB32A0 /* UIImage+DHImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DHImageAdditions.h"; sourceTree = "<group>"; };
+		8E7F14901E822AE300CB32A0 /* UIView+DHSmartScreenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DHSmartScreenshot.m"; sourceTree = "<group>"; };
+		8E7F14911E822AE300CB32A0 /* UIScrollView+DHSmartScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DHSmartScreenshot.h"; sourceTree = "<group>"; };
+		8E7F14921E822AE300CB32A0 /* UIImage+DHImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DHImageAdditions.m"; sourceTree = "<group>"; };
+		8E7F14931E822AE300CB32A0 /* UIScrollView+DHSmartScreenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DHSmartScreenshot.m"; sourceTree = "<group>"; };
+		8E7F14941E822AE300CB32A0 /* UITableView+DHSmartScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DHSmartScreenshot.h"; sourceTree = "<group>"; };
+		8E7F14951E822AE300CB32A0 /* UITableView+DHSmartScreenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DHSmartScreenshot.m"; sourceTree = "<group>"; };
+		8E7F14961E822AE300CB32A0 /* UIView+DHSmartScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DHSmartScreenshot.h"; sourceTree = "<group>"; };
+		8E7F149B1E822AED00CB32A0 /* DHSmartScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSmartScreenshot.h; sourceTree = "<group>"; };
 		8E8E55B61E7F7C720031E216 /* dynamicCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dynamicCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8E55BA1E7F7C720031E216 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E8E55BC1E7F7C720031E216 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E7F148E1E822AD800CB32A0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F149B1E822AED00CB32A0 /* DHSmartScreenshot.h */,
+				8E7F148F1E822AE300CB32A0 /* UIImage+DHImageAdditions.h */,
+				8E7F14901E822AE300CB32A0 /* UIView+DHSmartScreenshot.m */,
+				8E7F14911E822AE300CB32A0 /* UIScrollView+DHSmartScreenshot.h */,
+				8E7F14921E822AE300CB32A0 /* UIImage+DHImageAdditions.m */,
+				8E7F14931E822AE300CB32A0 /* UIScrollView+DHSmartScreenshot.m */,
+				8E7F14941E822AE300CB32A0 /* UITableView+DHSmartScreenshot.h */,
+				8E7F14951E822AE300CB32A0 /* UITableView+DHSmartScreenshot.m */,
+				8E7F14961E822AE300CB32A0 /* UIView+DHSmartScreenshot.h */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		8E8E55AD1E7F7C720031E216 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +98,7 @@
 		8E8E55B81E7F7C720031E216 /* dynamicCell */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F148E1E822AD800CB32A0 /* New Group */,
 				8E8E55BC1E7F7C720031E216 /* AppDelegate.h */,
 				8E8E55BD1E7F7C720031E216 /* AppDelegate.m */,
 				8E8E55BF1E7F7C720031E216 /* ViewController.h */,
@@ -170,12 +200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7F14991E822AE300CB32A0 /* UIScrollView+DHSmartScreenshot.m in Sources */,
+				8E7F149A1E822AE300CB32A0 /* UITableView+DHSmartScreenshot.m in Sources */,
 				8E8E55C11E7F7C720031E216 /* ViewController.m in Sources */,
 				8E8E55BE1E7F7C720031E216 /* AppDelegate.m in Sources */,
 				8E8E55D71E7FC5550031E216 /* NEDetailTableViewController.m in Sources */,
 				8E8E55DA1E7FCA200031E216 /* NETransition.m in Sources */,
 				8E8E55D31E7F7C880031E216 /* NETableViewCell.m in Sources */,
+				8E7F14971E822AE300CB32A0 /* UIView+DHSmartScreenshot.m in Sources */,
 				8E8E55BB1E7F7C720031E216 /* main.m in Sources */,
+				8E7F14981E822AE300CB32A0 /* UIImage+DHImageAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

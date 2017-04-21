@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NEDetailTableViewController : UITableViewController
+@property (nonatomic, strong) UIView *bottomView;
 
 @end

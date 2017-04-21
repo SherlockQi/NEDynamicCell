@@ -9,44 +9,60 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "dynamicCell/NEDetailTableViewController.m"
-            timestampString = "511756369.445866"
+            filePath = "dynamicCell/NETransition.m"
+            timestampString = "511846000.667648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-presentAnimateTransition:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dynamicCell/NETransition.m"
+            timestampString = "511859296.849304"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-presentAnimateTransition:"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[NEDetailTableViewController tableView:didSelectRowAtIndexPath:]"
+                  symbolName = "-[NETransition presentAnimateTransition:]"
                   moduleName = "dynamicCell"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hosa/Desktop/dynamicCell/dynamicCell/NEDetailTableViewController.m"
-                  timestampString = "511755041.872124"
+                  urlString = "file:///Users/hosa/Desktop/dynamicCell/dynamicCell/NETransition.m"
+                  timestampString = "511857540.463629"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "84">
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "1388">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__65-[NEDetailTableViewController tableView:didSelectRowAtIndexPath:]_block_invoke"
+                  symbolName = "__41-[NETransition presentAnimateTransition:]_block_invoke"
                   moduleName = "dynamicCell"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hosa/Desktop/dynamicCell/dynamicCell/NEDetailTableViewController.m"
-                  timestampString = "511755041.873404"
+                  urlString = "file:///Users/hosa/Desktop/dynamicCell/dynamicCell/NETransition.m"
+                  timestampString = "511857540.46491"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -58,13 +74,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "dynamicCell/NETransition.m"
-            timestampString = "511755909.702428"
+            timestampString = "511859296.849304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-presentAnimateTransition:"
-            landmarkType = "7">
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "@implementation NETransition"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "dynamicCell/NETransition.m"
+            timestampString = "511859296.849304"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "@implementation NETransition"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

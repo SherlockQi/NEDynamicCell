@@ -6,7 +6,7 @@
 
 
 ![image](https://github.com/SherlockQi/NEDynamicCell/blob/master/cell.gif )   
-
+![image](https://github.com/SherlockQi/NEDynamicCell/blob/master/animation.gif )   
 
 ####原理:
 1. 监听 tableView 滚动
